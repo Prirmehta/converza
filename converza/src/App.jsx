@@ -8,7 +8,7 @@ function App() {
   if (page === 'main') {
     return <MainPage onExplore={() => setPage('explore')} />;
   }
-  return <ExploreNow />;
+  return <ExploreNow onBackToMain={() => setPage('main')} />;
 }
 
 export default App;
