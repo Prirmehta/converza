@@ -350,9 +350,9 @@ html, body, #root {
   top: 60px;
   right: 0;
   background: #fff;
-  color: #7c3aed;
+  color: #728156;
   min-width: 140px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  box-shadow: 0 4px 24px rgba(114, 129, 86, 0.13);
   border-radius: 12px;
   padding: 0.7rem 0.5rem;
   display: flex;
@@ -360,11 +360,12 @@ html, body, #root {
   gap: 0.5rem;
   z-index: 20;
   animation: fadeIn 0.2s;
+  border: 1px solid #CFE1B9;
 }
 
 .dropdown-option {
   background: none;
-  color: #7c3aed;
+  color: #728156;
   border: none;
   border-radius: 8px;
   padding: 0.6em 1em;
@@ -375,7 +376,7 @@ html, body, #root {
   transition: background 0.18s, color 0.18s;
 }
 .dropdown-option:hover, .dropdown-option:focus {
-  background: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #88976C 0%, #728156 100%);
   color: #fff;
 }
 
@@ -996,4 +997,156 @@ body {
 @keyframes leftPageFlip {
   0% { transform: none; }
   100% { transform: perspective(1200px) rotateY(180deg) scaleX(0.92); }
+}
+
+:root {
+  --color-1: #E7F5DC;
+  --color-2: #CFE1B9;
+  --color-3: #B6C998;
+  --color-4: #98A77C;
+  --color-5: #88976C;
+  --color-6: #728156;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: var(--color-6);
+}
+
+/* Main backgrounds */
+.main-bg, .notebook-bg, .dashboard-bg {
+  background: linear-gradient(135deg, var(--color-1) 0%, var(--color-2) 40%, var(--color-3) 100%);
+}
+
+/* Card backgrounds */
+.profile-dropdown-new, .notebook-page, .dashboard-card, .content, .cardStyle {
+  background: var(--color-1);
+  color: var(--color-6);
+  box-shadow: 0 4px 32px var(--color-4)22;
+}
+
+/* Buttons */
+button, .explore-btn-small, .dropdown-option {
+  background: linear-gradient(90deg, var(--color-3) 60%, var(--color-4) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 2px 16px var(--color-4)33;
+  transition: background 0.2s, transform 0.1s;
+}
+button:hover, .explore-btn-small:hover, .dropdown-option:hover {
+  background: linear-gradient(90deg, var(--color-2) 60%, var(--color-3) 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+
+/* Override dropdown styles specifically for green theme */
+.profile-dropdown-new {
+  background: #fff !important;
+  color: var(--color-6) !important;
+  border: 1px solid var(--color-2) !important;
+  box-shadow: 0 8px 32px rgba(114, 129, 86, 0.15) !important;
+  border-radius: 16px !important;
+  padding: 0.5rem 0.3rem !important;
+  min-width: 120px !important;
+  backdrop-filter: blur(10px) !important;
+  right: 5px !important;
+}
+
+.dropdown-option {
+  background: none !important;
+  color: var(--color-6) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 0.5em 0.8em !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  margin: 0.2rem 0.3rem !important;
+}
+
+.dropdown-option:hover, .dropdown-option:focus {
+  background: linear-gradient(90deg, var(--color-5) 0%, var(--color-6) 100%) !important;
+  color: #fff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(114, 129, 86, 0.3) !important;
+}
+
+/* Navbar */
+.main-navbar, .notebook-navbar, .dashboard-navbar {
+  background: linear-gradient(90deg, var(--color-4) 0%, var(--color-5) 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px var(--color-5)22;
+}
+
+/* Headings */
+.main-heading, .navTitleStyle, .headingStyle {
+  color: var(--color-6);
+  text-shadow: 0 4px 32px var(--color-4)55, 0 1px 0 var(--color-4);
+}
+
+/* Subheadings */
+.sub-heading, .subheadingStyle {
+  color: var(--color-2);
+}
+
+/* Panel backgrounds */
+.leftPanel {
+  background: var(--color-5)11;
+}
+.midPanel {
+  background: #fff;
+}
+.rightPanel {
+  background: var(--color-4)11;
+}
+
+/* Accent borders and shadows */
+.notebook-page, .dashboard-card {
+  border-radius: 1.2em;
+  box-shadow: 0 2px 12px var(--color-4)11;
+}
+
+/* Animated list backgrounds */
+.animated-list-item {
+  background: var(--color-2);
+  color: var(--color-6);
+  border-left: 5px solid var(--color-4);
+}
+
+/* Tooltip */
+.tooltip {
+  background: var(--color-4);
+  color: #fff;
+}
+
+/* Profile icon */
+.profile-circle {
+  background: linear-gradient(135deg, var(--color-1) 0%, var(--color-2) 30%, var(--color-3) 60%, var(--color-4) 100%);
+  box-shadow: 0 2px 16px var(--color-4)33;
+}
+
+/* Remove default borders */
+input, textarea, select {
+  border: 1.5px solid var(--color-2);
+  background: var(--color-1);
+  color: var(--color-6);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-4);
+  outline: none;
+}
+
+/* Misc */
+::-webkit-scrollbar-thumb {
+  background: var(--color-4);
+}
+::-webkit-scrollbar-track {
+  background: var(--color-1);
 }
