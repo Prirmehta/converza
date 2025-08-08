@@ -121,13 +121,13 @@ const navTitleStyle = {
 const profileCircleStyle = {
   width: '38px',
   height: '38px',
-  clipPath: 'polygon(60% 0%, 100% 20%, 90% 70%, 70% 100%, 30% 100%, 0% 70%, 10% 20%, 40% 0%)',
+  borderRadius: '50%',
   border: 'none',
-  background: 'linear-gradient(135deg, #E7F5DC 0%, #CFE1B9 30%, #B6C998 60%, #88976C 100%)',
+  background: '#28a745',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  boxShadow: '0 2px 8px #72815622',
+  boxShadow: '0 2px 4px rgba(40,167,69,0.2)',
   cursor: 'pointer',
   transition: 'transform 0.18s, box-shadow 0.18s',
   outline: 'none',
@@ -316,7 +316,7 @@ function ExploreNow({ onBackToMain, onLogin, onSignup }) {
             onClick={() => setProfileOpen((v) => !v)}
             aria-label="Profile"
           >
-            <svg height="24" width="24" viewBox="0 0 24 24" fill="none" stroke="#728156" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg height="24" width="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="8" r="4" />
               <path d="M16 20v-2a4 4 0 0 0-8 0v2" />
             </svg>
